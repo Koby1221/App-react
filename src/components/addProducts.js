@@ -8,6 +8,7 @@ function AddProduct(){
     let inputNameRef=useRef()
     let inputImgRef=useRef()
     const navigate = useNavigate();
+    console.log("fd");
     
     const change=()=>{
     let manager=JSON.parse (localStorage.getItem("manager"))
