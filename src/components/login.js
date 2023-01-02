@@ -21,7 +21,7 @@ const LogIn = (props) => {
             },
             (err)=>{
                 Swal.fire({
-                    icon: 'error',
+                    // icon: 'error',
                     title:err.response.data.err
                   })
                 
