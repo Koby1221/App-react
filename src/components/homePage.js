@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {  Link ,useNavigate} from "react-router-dom";
 const axios = require('axios').default;
+const Swal = require('sweetalert2');
 
 const HomePage= (props)=>{
 	let [arr, setArr] = useState([])

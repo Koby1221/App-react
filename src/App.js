@@ -3,11 +3,11 @@ import "./App.css";
 
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import Input from "./components/input";
+import Time from "./components/time";
 import LogIn from "./components/login";
 import Adduser from "./components/adduser";
 import Manager from "./components/manager";
-import Server from "./components/server";
+
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import FirstPage from "./components/firstPage";
 import DeleitUser from "./components/deleitUser";
@@ -32,6 +32,7 @@ function App() {
           <Route path="/homePage" element={<HomePage user={user} />} />
           <Route path="/Scoreboard" element={<Scoreboard />} />
           <Route path="/deleitproduct" element={<DeleitProduct />} />
+          <Route path="/time" element={<Time/>} />
         </Routes>
       </BrowserRouter>
     </div>
