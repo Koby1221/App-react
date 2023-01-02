@@ -15,7 +15,7 @@ import AddProduct from "./components/addProducts";
 import HomePage from "./components/homePage";
 import Scoreboard from "./components/Scoreboard";
 import DeleitProduct from "./components/deliteProduct";
-
+// בדיקה אם השטות הזו עובדת !
 function App() {
   let [user, setUser] = useState(false);
 
