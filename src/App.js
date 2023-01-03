@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Time from "./components/time";
 import LogIn from "./components/login";
 import Adduser from "./components/adduser";
@@ -19,49 +19,62 @@ import DeleitProduct from "./components/deliteProduct";
 
 function App() {
 
-  const [days, setDays] = useState(`0`)
-  const [hours, setHours] = useState(`0`)
-  const [minutes, setMinutes] = useState(`0`)
-  const [inputDaysRef, setInputDaysRef] = useState(`0`)
-  const [inputTimeRef, setInputTimeRef] = useState(`0`)
-  const[seconds,setSeconds]=useState('0')
+  const [days, setDays] = useState("0")
+  const [hours, setHours] = useState("0")
+  const [minutes, setMinutes] = useState("")
+  const [inputDaysRef, setInputDaysRef] = useState(false)
+  const [inputTimeRef, setInputTimeRef] = useState(false)
+  const[seconds,setSeconds]=useState("0")
 
-  function startApp (e,r) {
-   
-    setInputDaysRef(e);
-    setInputTimeRef(r);
+   const startApp = (e,r)=> {
+   console.log("e=",e, "r=",r);
+     setInputDaysRef(e);
+     setInputTimeRef(r);
+
+     
     
    
-    
-    let x = setInterval(function () {
-        let date=new Date(inputDaysRef);
-        // let date=new Date(inputDaysRef.current.value);
-        let text=(String(date));
-        let result = text.substring(3, 10);
-        let ms = result+" "+ String(date.getFullYear()) +" "+String(inputTimeRef);
-        let countDownDate = new Date(ms).getTime();
-        let now = new Date().getTime();
-        let distance = countDownDate - now;
-
-        
-        setDays(Math.floor(distance / (1000 * 60 * 60 * 24)))
-        setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
-        setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)))
-        setSeconds(Math.floor((distance % (1000 * 60)) / 1000))
-
-
-        
-
-
-        
-        if (distance <= 0) {
-            clearInterval(x);
-
-        }
-    }, 1000);
   }
 
+  const play=()=>{
+    if(inputDaysRef){
+      console.log( "inputDaysRef=" , inputDaysRef, "inputTimeRef=", inputTimeRef);
+  
+      let x = setInterval(function () {
+        console.log( "inputDaysRef=" , inputDaysRef, "inputTimeRef=", inputTimeRef);
+          let date=new Date(inputDaysRef);
+          // let date=new Date(inputDaysRef.current.value);
+          let text=(String(date));
+          let result = text.substring(3, 10);
+          let ms = result+" "+ String(date.getFullYear()) +" "+String(inputTimeRef);
+          console.log(ms);
+          console.log( "inputDaysRef=" , inputDaysRef, "inputTimeRef=", inputTimeRef);
+          let countDownDate = new Date(ms).getTime();
+          let now = new Date().getTime();
+          let distance = countDownDate - now;
+    
+          
+          setDays(Math.floor(distance / (1000 * 60 * 60 * 24)))
+          setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
+          setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)))
+          setSeconds(Math.floor((distance % (1000 * 60)) / 1000))
+    
+    
+          
+    
+    
+          
+          if (distance <= 0) {
+              clearInterval(x);
+    
+          }
+      }, 1000);
+    }
+   
+   }
+
   let [user, setUser] = useState(false);
+  useEffect(play,[inputTimeRef,inputTimeRef])
 
   return (
     <div>
