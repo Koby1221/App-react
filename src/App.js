@@ -36,19 +36,15 @@ function App() {
    
   }
 
-  const play=()=>{
+  const Interval=()=>{
     if(inputDaysRef){
-      console.log( "inputDaysRef=" , inputDaysRef, "inputTimeRef=", inputTimeRef);
-  
-      let x = setInterval(function () {
-        console.log( "inputDaysRef=" , inputDaysRef, "inputTimeRef=", inputTimeRef);
-          let date=new Date(inputDaysRef);
-          // let date=new Date(inputDaysRef.current.value);
+      
+        let x = setInterval(function () {
+        let date=new Date(inputDaysRef);
+        
           let text=(String(date));
           let result = text.substring(3, 10);
           let ms = result+" "+ String(date.getFullYear()) +" "+String(inputTimeRef);
-          console.log(ms);
-          console.log( "inputDaysRef=" , inputDaysRef, "inputTimeRef=", inputTimeRef);
           let countDownDate = new Date(ms).getTime();
           let now = new Date().getTime();
           let distance = countDownDate - now;
@@ -66,6 +62,10 @@ function App() {
           
           if (distance <= 0) {
               clearInterval(x);
+              setDays("0");
+              setHours("0");
+              setMinutes("0");
+              setSeconds("0");
     
           }
       }, 1000);
@@ -74,7 +74,7 @@ function App() {
    }
 
   let [user, setUser] = useState(false);
-  useEffect(play,[inputTimeRef,inputTimeRef])
+  useEffect(Interval,[inputTimeRef,inputTimeRef])
 
   return (
     <div>

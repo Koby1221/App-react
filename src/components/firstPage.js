@@ -29,10 +29,11 @@ function FirstPage() {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     <div className="all-cards">
         <div className="card1">
-        <Link to={"/manager"}><img
+          <button disabled = {true}><Link to={"/manager"} ><img
             src="https://www.w3schools.com/howto/img_avatar.png"
             alt="Avatar"
-          /></Link>
+          /></Link></button>
+        
           <div className="container">
             <h4>
               <b>מנהל</b>
@@ -40,7 +41,7 @@ function FirstPage() {
               </div>
           </div>
           <div className="card2">
-          <Link to={"/login"}><img
+          <Link to={"/login"} disabled = {false}><img
               src="https://www.w3schools.com/w3images/avatar2.png"
               alt="Avatar"
             /></Link>
