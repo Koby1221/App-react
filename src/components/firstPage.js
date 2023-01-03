@@ -1,9 +1,12 @@
 import { Link, Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+
 import "../App.css"
 import Time from "./time";
 
-function FirstPage() {
+
+function FirstPage(props) {
+  const navigate = useNavigate();
   return (
     <div className="time">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,7 +32,7 @@ function FirstPage() {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     <div className="all-cards">
         <div className="card1">
-          <button disabled = {true}><Link to={"/manager"} ><img
+          <button><Link to={"/manager"} ><img
             src="https://www.w3schools.com/howto/img_avatar.png"
             alt="Avatar"
           /></Link></button>
@@ -41,10 +44,10 @@ function FirstPage() {
               </div>
           </div>
           <div className="card2">
-          <Link to={"/login"} disabled = {false}><img
+          <button disabled={props.disabled} onClick={()=>{navigate("/login")}}><img
               src="https://www.w3schools.com/w3images/avatar2.png"
               alt="Avatar"
-            /></Link>
+            /></button>
             <div className="container">
               <h4>
                 <b>משתמש</b>
@@ -64,6 +67,9 @@ function FirstPage() {
        <br></br>  
        <br></br>  
         <button role="button" className="button"><Link to={"/Scoreboard"}>לוח תוצאות</Link></button> 
+        
+          
+          
 </div>
 
 

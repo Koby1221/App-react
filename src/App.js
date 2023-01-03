@@ -25,18 +25,18 @@ function App() {
   const [inputDaysRef, setInputDaysRef] = useState(false)
   const [inputTimeRef, setInputTimeRef] = useState(false)
   const[seconds,setSeconds]=useState("0")
+  const[disabled,setdisabled]=useState(false)
 
    const startApp = (e,r)=> {
-   console.log("e=",e, "r=",r);
-     setInputDaysRef(e);
-     setInputTimeRef(r);
-
-     
     
-   
-  }
+    setInputDaysRef(e);
+    setInputTimeRef(r);
 
-  const Interval=()=>{
+    }
+
+  
+  
+    const Interval=()=>{
     if(inputDaysRef){
       
         let x = setInterval(function () {
@@ -66,6 +66,7 @@ function App() {
               setHours("0");
               setMinutes("0");
               setSeconds("0");
+              setdisabled(true)
     
           }
       }, 1000);
@@ -81,7 +82,7 @@ function App() {
        <h1 style={{ color: "red" }}>{days}d {hours}h {minutes}m {seconds}s</h1>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<FirstPage />} />
+          <Route path="/" element={<FirstPage  disabled={disabled}/>} />
           <Route path="/Manager" element={<Manager />} />
           <Route path="/Adduser" element={<Adduser />} />
           <Route path="/login" element={<LogIn setUser={setUser} />} />
