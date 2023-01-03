@@ -25,12 +25,13 @@ function App() {
   const [inputDaysRef, setInputDaysRef] = useState(false)
   const [inputTimeRef, setInputTimeRef] = useState(false)
   const[seconds,setSeconds]=useState("0")
-  const[disabled,setdisabled]=useState(false)
+  const[disabled,setdisabled]=useState(true)
 
    const startApp = (e,r)=> {
     
     setInputDaysRef(e);
     setInputTimeRef(r);
+    setdisabled(true)
 
     }
 
@@ -66,7 +67,7 @@ function App() {
               setHours("0");
               setMinutes("0");
               setSeconds("0");
-              setdisabled(true)
+              setdisabled(false)
     
           }
       }, 1000);
