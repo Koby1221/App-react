@@ -1,6 +1,8 @@
 import { Link, Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../App.css"
+import Time from "./time";
+
 function FirstPage() {
   return (
     <div className="time">

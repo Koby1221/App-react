@@ -27,14 +27,7 @@ const Manager=(props)=>{
     }
 
     return(
-        // <div>
-        //     <div style={{display:display}}>
-        //         <h1>הכנס שם</h1>
-        //         <input ref={inputNameRef} required></input>
-        //         <h1>הכנס סיסמא </h1>
-        //         <input  ref={inputPassRef} required></input>
-        //         <button onClick={enter}>אישור</button>
-        //     </div>
+        
         <>
         <div class="login-box" style={{display:display}}>
         <form onSubmit={enter}>
@@ -62,10 +55,11 @@ const Manager=(props)=>{
             <button ><Link to={"/"}> חזרה לעמוד הראשי </Link></button>  
             <button><Link to={"/adduser"}><h1>הוספת בוחר</h1></Link></button>
             <button><Link to={"/deleitUser"}><h1>הסרת בוחר</h1></Link></button>
-            <button><Link to={"/addproduct"}><h1>הוספת פריט</h1></Link></button>
-            <button><Link to={"/deleitproduct"}><h1>מחיקת פריט</h1></Link></button>
-            </div>
+            <button><Link to={"/addproduct"}><h1>הוספת מפלגה</h1></Link></button>
+            <button><Link to={"/deleitproduct"}><h1>מחיקת מפלגה</h1></Link></button>
             <button><Link to={"/time"}><h1>התחל בחירות </h1></Link></button>
+            </div>
+           
             
             </>
       
