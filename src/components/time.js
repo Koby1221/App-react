@@ -7,6 +7,8 @@ const Time = (props) => {
     let inputDaysRef = useRef()
     let inputTimeRef = useRef()
 
+    const [input1, setinput1] = useState(`0`)
+    const [input2, setinput2] = useState(`0`)
 
 
 
@@ -14,8 +16,8 @@ const Time = (props) => {
     e.preventDefault()
     // props.setInputDaysRef(inputDaysRef.current.value)
     // props.setInputTimeRef(inputTimeRef.current.value)
-      
-    // console.log( props.startApp);
+      props.startApp(inputDaysRef.current.value , inputTimeRef.current.value)
+     console.log(inputDaysRef.current.value ,inputTimeRef.current.value );
 
    }
 
@@ -29,8 +31,8 @@ const Time = (props) => {
         <>
            
             <div className="login-box">
-
-                <form onSubmit={props.startApp(inputDaysRef.current.value , inputTimeRef.current.value)}>
+            
+                 <form onSubmit= {start}> 
                     <div className="user-box">
                         <input type="date" name="" required ref={inputDaysRef} />
                         <label>הכנס יום</label>
@@ -47,6 +49,7 @@ const Time = (props) => {
                         <input type={"submit"} />
                     </a>
                 </form>
+                <button onClick={start}></button>
                 <button><Link to={"/"}> חזרה לעמוד הראשי </Link></button>
             </div>
            
