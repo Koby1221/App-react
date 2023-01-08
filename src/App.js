@@ -31,7 +31,7 @@ function App() {
 
     setInputDaysRef(e);
     setInputTimeRef(r);
-    setdisabled(true)
+    setdisabled(false)
 
   }
 
@@ -68,7 +68,7 @@ function App() {
           setHours("0");
           setMinutes("0");
           setSeconds("0");
-          setdisabled(false)
+          setdisabled(true)
 
         }
       }, 1000);

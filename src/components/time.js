@@ -28,7 +28,7 @@ const Time = (props) => {
         //     <h1 style={{color:"red"}}>{days}d {hours}h {minutes}m {seconds}s</h1>
 
         // </div>
-        <>
+        <div>
 
             <div className="login-box">
 
@@ -52,7 +52,7 @@ const Time = (props) => {
                 <button><Link to={"/"}> חזרה לעמוד הראשי </Link></button>
             </div>
 
-        </>
+        </div>
     )
 }
 

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import React, { useEffect, useState ,useRef} from "react";
+ import "../css/btn.css"
 const axios = require('axios').default;
 
 const Manager=(props)=>{
@@ -48,16 +49,25 @@ const Manager=(props)=>{
             <input type={"submit"} />
         </a>
         </form>
-        <button><Link to={"/"}> חזרה לעמוד הראשי </Link></button> 
-        </div>
         
+        </div>
+        <button ><Link to={"/"}> חזרה לעמוד הראשי </Link></button>  
             <div style={{display:display2}}>
-            <button ><Link to={"/"}> חזרה לעמוד הראשי </Link></button>  
-            <button><Link to={"/adduser"}><h1>הוספת בוחר</h1></Link></button>
-            <button><Link to={"/deleitUser"}><h1>הסרת בוחר</h1></Link></button>
-            <button><Link to={"/addproduct"}><h1>הוספת מפלגה</h1></Link></button>
-            <button><Link to={"/deleitproduct"}><h1>מחיקת מפלגה</h1></Link></button>
-            <button><Link to={"/time"}><h1>התחל בחירות </h1></Link></button>
+           
+            <div class="btn-group">
+            <button><Link to={"/adduser"}>הוספת בוחר</Link></button>
+            <button><Link to={"/deleitUser"}>מחיקת בוחר</Link></button>
+            <button><Link to={"/addproduct"}> הוספת מפלגה</Link></button>
+            <button><Link to={"/deleitproduct"}> מחיקת מפלגה</Link></button>
+            <button><Link to={"/time"}> התחל בחירות</Link></button>
+           
+            </div>
+             
+            {/* <div className="divbtn"><button className="btn"><Link to={"/adduser"}><h1>הוספת בוחר</h1></Link></button></div>
+            <div className="divbtn"><button className="btn"><Link to={"/deleitUser"}><h1>הסרת בוחר</h1></Link></button></div>
+            <div className="divbtn"><button className="btn"><Link to={"/addproduct"}><h1>הוספת מפלגה</h1></Link></button></div>
+            <div className="divbtn"><button className="btn"><Link to={"/deleitproduct"}><h1>מחיקת מפלגה</h1></Link></button></div>
+            <div className="divbtn"><button className="btn"><Link to={"/time"}><h1>התחל בחירות </h1></Link></button></div>   */}
             </div>
            
             
