@@ -3,23 +3,23 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 const Time = (props) => {
-   
-    let inputDaysRef = useRef()
-    let inputTimeRef = useRef()
 
-    const [input1, setinput1] = useState(`0`)
-    const [input2, setinput2] = useState(`0`)
+    // let inputDaysRef = useRef()
+    // let inputTimeRef = useRef()
+
+    const [input1, setinput1] = useState(``)
+    const [input2, setinput2] = useState(``)
 
 
 
-   const start=(e)=>{
-    e.preventDefault()
-    // props.setInputDaysRef(inputDaysRef.current.value)
-    // props.setInputTimeRef(inputTimeRef.current.value)
-      props.startApp(inputDaysRef.current.value , inputTimeRef.current.value)
-     console.log(inputDaysRef.current.value ,inputTimeRef.current.value );
+    const start = (e) => {
+        e.preventDefault()
+        // props.setInputDaysRef(inputDaysRef.current.value)
+        // props.setInputTimeRef(inputTimeRef.current.value)
+        props.startApp(input1, input2)
+        // console.log(inputDaysRef.current.value, inputTimeRef.current.value);
 
-   }
+    }
 
 
 
@@ -29,16 +29,16 @@ const Time = (props) => {
 
         // </div>
         <>
-           
+
             <div className="login-box">
-            
-                 <form onSubmit= {start}> 
+
+                <form onSubmit={start}>
                     <div className="user-box">
-                        <input type="date" name="" required ref={inputDaysRef} />
+                        <input type="date" name="" onChange={(e)=>{setinput1(e.target.value)}} />
                         <label>הכנס יום</label>
                     </div>
                     <div className="user-box">
-                        <input type="time" name="" required ref={inputTimeRef} />
+                        <input type="time" name="" onChange={(e)=>{setinput2(e.target.value)}} />
                         <label> הכנס שעה </label>
                     </div>
                     <a href="#">
@@ -49,10 +49,9 @@ const Time = (props) => {
                         <input type={"submit"} />
                     </a>
                 </form>
-                <button onClick={start}></button>
                 <button><Link to={"/"}> חזרה לעמוד הראשי </Link></button>
             </div>
-           
+
         </>
     )
 }
