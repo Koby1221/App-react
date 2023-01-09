@@ -1,13 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
-
+import "../src/css/firstPage.css"
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Time from "./components/time";
 import LogIn from "./components/login";
 import Adduser from "./components/adduser";
 import Manager from "./components/manager";
-
+import Timer from "./components/timer";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import FirstPage from "./components/firstPage";
 import DeleitUser from "./components/deleitUser";
@@ -86,8 +86,9 @@ function App() {
 
   return (
     <div>
-      <h1 style={{ color: "red" }}>{days}d {hours}h {minutes}m {seconds}s</h1>
+      {/* <div className="timer"> */}
       <BrowserRouter>
+      <Timer days={days} hours={hours} minutes={minutes} seconds={seconds} ></Timer>
         <Routes>
           <Route path="/" element={<FirstPage disabled={disabled} />} />
           <Route path="/Manager" element={<Manager />} />
