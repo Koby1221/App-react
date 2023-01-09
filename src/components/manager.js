@@ -51,17 +51,41 @@ const Manager=(props)=>{
         </form>
         
         </div>
-        <button ><Link to={"/"}> חזרה לעמוד הראשי </Link></button>  
+        <button role="button" className="button"><Link to={"/"}>  חזרה לעמוד הראשי  </Link></button> 
+        {/* <button ><Link to={"/"}> חזרה לעמוד הראשי </Link></button>   */}
             <div style={{display:display2}}>
            
-            <div class="btn-group">
+            {/* <div class="btn-group">
             <button><Link to={"/adduser"}>הוספת בוחר</Link></button>
             <button><Link to={"/deleitUser"}>מחיקת בוחר</Link></button>
             <button><Link to={"/addproduct"}> הוספת מפלגה</Link></button>
             <button><Link to={"/deleitproduct"}> מחיקת מפלגה</Link></button>
             <button><Link to={"/time"}> התחל בחירות</Link></button>
            
-            </div>
+            </div> */}
+
+        <div className="buttons">
+       <button role="button" className="button"><Link to={"/adduser"}>  הוספת בוחר </Link></button> 
+       <br></br>  
+       <br></br>  
+       <br></br>  
+        <button role="button" className="button"><Link to={"/deleitUser"}> מחיקת בוחר</Link></button> 
+        <br></br>  
+       <br></br>  
+       <br></br>
+       <button role="button" className="button"><Link to={"/addproduct"}>  הוספת מפלגה</Link></button> 
+       <br></br>  
+       <br></br>  
+       <br></br>
+       <button role="button" className="button"><Link to={"/deleitproduct"}>  מחיקת מפלגה</Link></button> 
+       <br></br>  
+       <br></br>  
+       <br></br>
+       <button role="button" className="button"><Link to={"/time"}>   התחל בחירות</Link></button> 
+            
+          
+</div>
+
              
             {/* <div className="divbtn"><button className="btn"><Link to={"/adduser"}><h1>הוספת בוחר</h1></Link></button></div>
             <div className="divbtn"><button className="btn"><Link to={"/deleitUser"}><h1>הסרת בוחר</h1></Link></button></div>
