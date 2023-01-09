@@ -10,7 +10,7 @@ function FirstPage(props) {
   
   
   return (
-    <div className="time">
+    <div >
      
 
       <img className="imgTitle" src={imgTitle}/>
@@ -36,17 +36,14 @@ function FirstPage(props) {
 
 
 
-
-        <div className="buttons">
-       <button role="button" className="button"><Link to={"/"}> בחזרה לעמוד הראשי</Link></button> 
+    
+       
        <br></br>  
-       <br></br>  
-       <br></br>  
-        <button role="button" className="button"><Link to={"/Scoreboard"}>לוח תוצאות</Link></button> 
+        <button className="btnBody"><Link to={"/Scoreboard"}>לוח תוצאות</Link></button> 
         
           
           
-</div>
+
 
 
       {/* </div> */}
