@@ -86,7 +86,7 @@ function App() {
 
   return (
     <div>
-      {/* <div className="timer"> */}
+      
       <BrowserRouter>
       <Timer days={days} hours={hours} minutes={minutes} seconds={seconds} ></Timer>
         <Routes>

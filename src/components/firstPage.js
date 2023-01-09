@@ -14,39 +14,17 @@ function FirstPage(props) {
      
 
       <img className="imgTitle" src={imgTitle}/>
-      
-      
-          <Link to={"/manager"} ><button style={{ position: "absolute", left:"200px",top:"50%"}}>מנהל </button></Link>
-            
-             
-             
-         
-         
-        
-         
-         
-          <button style={{ position: "absolute", left:"250px",top:"50%"}} disabled={props.disabled} onClick={()=>{navigate("/login")}}>משתמש</button>
-              
-           
-           
-       
-
-
-
-
-
-
-    
-       
-       <br></br>  
-        <button className="btnBody"><Link to={"/Scoreboard"}>לוח תוצאות</Link></button> 
-        
+      <div>
+      <Link to={"/manager"} ><button style={{ position: "absolute", left:"200px",top:"50%"}}>מנהל </button></Link>
+      <button style={{ position: "absolute", left:"250px",top:"50%"}} disabled={props.disabled} onClick={()=>{navigate("/login")}}>משתמש</button>
+      <Link to={"/Scoreboard"}><button  style={{ position: "absolute", left:"300px",top:"50%"}}>לוח תוצאות</button></Link> 
+       </div> 
           
           
 
 
 
-      {/* </div> */}
+     
 
     </div>
   );

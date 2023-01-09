@@ -32,7 +32,7 @@ const Scoreboard= (props)=>{
 	
 	return(
 		<div>
-			<h1>welcome to server </h1>
+			
 			{
 				arr.map((item,index) =>{
 					return(
