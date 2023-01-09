@@ -21,7 +21,7 @@ function App() {
   let [user, setUser] = useState(false);
   const [days, setDays] = useState("0");
   const [hours, setHours] = useState("0");
-  const [minutes, setMinutes] = useState("");
+  const [minutes, setMinutes] = useState("0");
   const [inputDaysRef, setInputDaysRef] = useState(false);
   const [inputTimeRef, setInputTimeRef] = useState(false);
   const [seconds, setSeconds] = useState("0");

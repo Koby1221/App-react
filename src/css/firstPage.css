@@ -1,12 +1,68 @@
 .imgTitle{
-    top: 0%;
+    top: 16%;
     width: 100%;
     height: 250PX;
-
+    position: absolute;
 }
 
 .timer{
-    top: 42%;
+    top: 45%;
     color: red;
     position: absolute;
 }
+
+
+
+  
+  
+  .link{
+    margin-top: 40px;
+  }
+  
+  a{
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  
+  
+  
+  #clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+     position: absolute;
+    top: 0%;
+    right: 0%;
+  }
+  
+  
+  #clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #82918e;
+    display: inline-block;
+    /* position: absolute;
+    top: 70%; */
+
+  }
+  
+  #clockdiv div > span{
+    padding:20px;
+    border-radius: 3px;
+    background: #810004;
+    display: inline-block;
+   
+  }
+  
+  .smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+  }

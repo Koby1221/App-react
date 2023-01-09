@@ -11,37 +11,25 @@ function FirstPage(props) {
   
   return (
     <div className="time">
+     
+
       <img className="imgTitle" src={imgTitle}/>
       
-      <div style={{ paddingLeft: 16 }}></div>
-
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <div className="all-cards">
-        <div className="card1">
-          <button><Link to={"/manager"} ><img
-             src="https://www.w3schools.com/howto/img_avatar.png"
+      
+          <Link to={"/manager"} ><button style={{ position: "absolute", left:"200px",top:"50%"}}>מנהל </button></Link>
+            
              
-              // src={imgTitle}
-            alt="Avatar"
-          /></Link></button>
+             
+         
+         
         
-          <div className="container">
-            <h4>
-              <b>מנהל</b>
-            </h4>
-              </div>
-          </div>
-          <div className="card2">
-          <button disabled={props.disabled} onClick={()=>{navigate("/login")}}><img
-              src="https://www.w3schools.com/w3images/avatar2.png"
-              alt="Avatar"
-            /></button>
-            <div className="container">
-              <h4>
-                <b>משתמש</b>
-              </h4>
-            </div>
-          </div>
+         
+         
+          <button style={{ position: "absolute", left:"250px",top:"50%"}} disabled={props.disabled} onClick={()=>{navigate("/login")}}>משתמש</button>
+              
+           
+           
+       
 
 
 
@@ -61,7 +49,7 @@ function FirstPage(props) {
 </div>
 
 
-      </div>
+      {/* </div> */}
 
     </div>
   );
