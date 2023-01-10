@@ -7,11 +7,11 @@
     position: absolute;
 }
 
-.timer{
+/* .timer{
     top: 45%;
-    color: red;
-    position: absolute;
-}
+    /* color: red; */
+    /* position: absolute; */
+/* } */ */
 
 .bodyNuv{
   width: 100%;
@@ -63,8 +63,8 @@
     border-radius: 3px;
     background: #82918e;
     display: inline-block;
-    /* position: absolute;
-    top: 70%; */
+     /* position: absolute;
+     top: 0;   */
 
   }
   

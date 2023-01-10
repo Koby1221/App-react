@@ -87,6 +87,7 @@ function App() {
 
   return (
     <div className="app" style={{ backgroundImage: `url(${img})`}}>
+    
       <div>
         
       <BrowserRouter>

@@ -10,12 +10,12 @@ function FirstPage(props) {
   
   
   return (
-    <div className="aa">
+    <div className="aa" >
      
 
       <img className="imgTitle" src={imgTitle}/>
       <div>
-      {/* <Link to={"/manager"} ><button style={{ position: "absolute", left:"200px",top:"50%"}}>מנהל </button></Link> */}
+      <Link to={"/manager"} ><button style={{ position: "absolute", left:"200px",top:"50%"}}>מנהל </button></Link>
 
       
       <div id="wrapper">
