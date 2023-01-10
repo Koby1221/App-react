@@ -91,7 +91,7 @@ function App() {
         
       <BrowserRouter>
       
-       <Timer days={days} hours={hours} minutes={minutes} seconds={seconds} ></Timer> */}
+       <Timer days={days} hours={hours} minutes={minutes} seconds={seconds} ></Timer> 
         <Routes>
           <Route path="/" element={<FirstPage disabled={disabled} />} />
           <Route path="/Manager" element={<Manager />} />
