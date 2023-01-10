@@ -51,7 +51,7 @@ const Manager=(props)=>{
         </form>
         
         </div>
-        <button role="button" className="button"><Link to={"/"}>  חזרה לעמוד הראשי  </Link></button> 
+        {/* <button role="button" className="button"><Link to={"/"}>  חזרה לעמוד הראשי  </Link></button>  */}
         {/* <button ><Link to={"/"}> חזרה לעמוד הראשי </Link></button>   */}
             <div style={{display:display2}}>
            

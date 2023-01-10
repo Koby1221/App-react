@@ -19,7 +19,7 @@ function Adduser() {
   let manager=JSON.parse (localStorage.getItem("manager"))
   console.log(manager);
   if(manager==null){
-    // alert("Entry is not authorized")
+  
     Swal.fire({
       icon: 'error',
       title: "כניסה אינה מורשית",

@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "../src/css/firstPage.css"
+import img from "./img/wos144354.jpg"
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Time from "./components/time";
@@ -85,10 +86,12 @@ function App() {
   useEffect(Interval, [inputTimeRef])
 
   return (
-    <div>
-      
+    <div className="app" style={{ backgroundImage: `url(${img})`}}>
+      <div>
+        
       <BrowserRouter>
-      <Timer days={days} hours={hours} minutes={minutes} seconds={seconds} ></Timer>
+      
+       <Timer days={days} hours={hours} minutes={minutes} seconds={seconds} ></Timer> */}
         <Routes>
           <Route path="/" element={<FirstPage disabled={disabled} />} />
           <Route path="/Manager" element={<Manager />} />
@@ -102,6 +105,7 @@ function App() {
           <Route path="/time" element={<Time startApp={startApp} />} />
         </Routes>
       </BrowserRouter>
+      </div>
     </div>
   );
 }

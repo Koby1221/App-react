@@ -1,11 +1,12 @@
 import "../css/firstPage.css"
 import { Link, Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function Timer(props) {
-    
+    const navigate = useNavigate();
 
     return(
         <div className="bodyNuv">
-        <button style={{left:"0%",position: "absolute"  }}><Link to={"/"}> בחזרה לעמוד הראשי</Link></button> 
+        <button onClick={()=>{navigate("/")}}> בחזרה לעמוד הראשי</button> 
         
 
     <div id="clockdiv">
