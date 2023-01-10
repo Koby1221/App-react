@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "../src/css/firstPage.css"
-import img from "./img/wos144354.jpg"
+import img from "./img/a40d60.jpg"
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Time from "./components/time";
