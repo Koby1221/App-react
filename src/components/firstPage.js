@@ -12,7 +12,7 @@ function FirstPage(props) {
   return (
     <div className="aa" >
     <img className="imgTitle" src={imgTitle}/>
-      <div>
+      
       <div id="wrapper">
       <a href="#" class="my-super-cool-btn">
       <div class="dots-container">
@@ -64,7 +64,7 @@ function FirstPage(props) {
 
   
       
-       </div> 
+       
           
           
 

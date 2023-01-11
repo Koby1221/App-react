@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {  Link ,useNavigate} from "react-router-dom";
+import "../css/homePage.css"
 const axios = require('axios').default;
 const Swal = require('sweetalert2');
 
@@ -10,7 +11,10 @@ const HomePage= (props)=>{
 
 	const change=()=>{
 	if(id==null || ! props.user){
-    alert("כניסה אינה מורשית")
+		Swal.fire({
+			icon: 'error',
+			title: "כניסה אינה מורשית",
+		  })
     navigate('/')
 }
 }
@@ -47,8 +51,8 @@ const HomePage= (props)=>{
 	}
 	
 	useEffect(() => {
+		//  change();
 		doSearchApi();
-		change();
 	},[]);
 
 	
@@ -58,10 +62,27 @@ const HomePage= (props)=>{
 			{
 				arr.map((item,index) =>{
 					return(
-						<div key={index} >
-							<button  onClick={() =>{send(index)}}>
-							<img className="img" src={item.img}></img></button>
-							</div>
+						// <div key={index} >
+						// 	<button  onClick={() =>{send(index)}}>
+						// 	<img className="img" src={item.img}></img></button>
+						// 	</div>
+
+						// 
+						
+
+
+						<div>
+						<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+						<h1>Card Image with description on :hover</h1>
+						<div class="cards">
+  						<div class="card">
+    					<h2 class="card-title">Seal</h2>
+    					< img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt=""/>
+    					<p class="card-desc">Pinnipeds, commonly known as seals,[a] are a widely distributed and diverse clade of carnivorous, fin-footed, semiaquatic marine mammals. They comprise the extant families Odobenidae (whose only living member is the walrus), Otariidae (the eared seals: sea lions and fur seals), and Phocidae (the earless seals, or true seals).</p>
+  						</div>
+  						</div>
+						</div>
+						
 					)
 				}
 				)

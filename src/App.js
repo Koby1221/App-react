@@ -86,9 +86,9 @@ function App() {
   useEffect(Interval, [inputTimeRef])
 
   return (
-    <div className="app" style={{ backgroundImage: `url(${img})`}}>
+    <div className="app" >
     
-    
+   
         
       <BrowserRouter>
       
@@ -106,7 +106,7 @@ function App() {
           <Route path="/time" element={<Time startApp={startApp} />} />
         </Routes>
       </BrowserRouter>
-   
+    
     </div>
   );
 }
