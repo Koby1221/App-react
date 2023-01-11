@@ -11,16 +11,10 @@ function FirstPage(props) {
   
   return (
     <div className="aa" >
-     
-
-      <img className="imgTitle" src={imgTitle}/>
+    <img className="imgTitle" src={imgTitle}/>
       <div>
-      <Link to={"/manager"} ><button style={{ position: "absolute", left:"200px",top:"50%"}}>מנהל </button></Link>
-
-      
       <div id="wrapper">
       <a href="#" class="my-super-cool-btn">
-        
       <div class="dots-container">
       <div class="dot"></div>
       <div class="dot"></div>
@@ -28,7 +22,7 @@ function FirstPage(props) {
       <div class="dot"></div>
       </div>
       <span onClick={()=>{navigate("/manager")}}>כניסת מנהל</span>
-  </a>
+      </a>
 
 
 

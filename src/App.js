@@ -88,12 +88,12 @@ function App() {
   return (
     <div className="app" style={{ backgroundImage: `url(${img})`}}>
     
-      <div>
+    
         
       <BrowserRouter>
       
        <Timer days={days} hours={hours} minutes={minutes} seconds={seconds} ></Timer> 
-        <Routes>
+        <Routes  >
           <Route path="/" element={<FirstPage disabled={disabled} />} />
           <Route path="/Manager" element={<Manager />} />
           <Route path="/Adduser" element={<Adduser />} />
@@ -106,7 +106,7 @@ function App() {
           <Route path="/time" element={<Time startApp={startApp} />} />
         </Routes>
       </BrowserRouter>
-      </div>
+   
     </div>
   );
 }
