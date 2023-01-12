@@ -1,7 +1,7 @@
 
 
 .imgTitle{
-    top: 16%;
+    top: 18%;
     width: 100%;
     height: 250PX;
     position: absolute;
@@ -62,17 +62,18 @@
   #clockdiv > div{
     padding: 10px;
     border-radius: 3px;
-    background: #82918e;
+    /* background-image: url("https://iris-bs.co.il/wp-content/uploads/2021/01/100111.jpg");   */
     display: inline-block;
      /* position: absolute;
      top: 0;   */
+     background-color: rgb(218, 196, 196);
 
   }
   
   #clockdiv div > span{
     padding:20px;
     border-radius: 3px;
-    background: #810004;
+    background: rgb(208, 153, 162);
     display: inline-block;
    
   }
